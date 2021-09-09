@@ -18,17 +18,17 @@ jobs:
         # In order to fetch changed files
         with:
           fetch-depth: 0
-      - name: Checkout Spark repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          repository: apache/spark
-          ref: master
-          path: spark-master
+      # - name: Checkout Spark repository
+      #   uses: actions/checkout@v2
+      #   with:
+      #     fetch-depth: 0
+      #     repository: apache/spark
+      #     ref: master
+      #     path: spark-master
       - name: Generate output path by using Spark HEAD commit sha
         run: |
-          OUTPUT_PATH=spark-dep-graphs-`date '+%Y%m%d%H%M'`-`git rev-parse HEAD`
-          echo "OUTPUT_PATH=${OUTPUT_PATH}" >> $GITHUB_ENV
+          OUTPUT_NAME=spark-dep-graphs-`date '+%Y%m%d%H%M'`-`git rev-parse HEAD`
+          echo "OUTPUT_NAME=${OUTPUT_NAME}" >> $GITHUB_ENV
       - name: Install Python ${{ env.python }}
         uses: actions/setup-python@v2
         with:
@@ -40,21 +40,49 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ env.java }}
-      - name: Build with Maven
+      # - name: Build with Maven
+      #   run: |
+      #     export MAVEN_OPTS="-Xss64m -Xmx2g -XX:ReservedCodeCacheSize=1g -Dorg.slf4j.simpleLogger.defaultLogLevel=WARN"
+      #     export MAVEN_CLI_OPTS="--no-transfer-progress"
+      #     export JAVA_VERSION=${{ env.java }}
+      #     cd spark-master && ./build/mvn $MAVEN_CLI_OPTS -DskipTests -Pyarn -Pmesos -Pkubernetes -Phive -Phive-thriftserver -Phadoop-cloud -Djava.version=$JAVA_VERSION test-compile
+      # - name: Analyze Spark class dependencies
+      #   run: |
+      #     ./bin/analyze-spark-deps.sh ./spark-master "${{ env.OUTPUT_NAME }}"
+      # - name: List up test classes
+      #   run: |
+      #     ./bin/build-deps.py --command list --file-type java --target-package org.apache.spark --root-paths ./spark-master >> "${{ env.OUTPUT_NAME }}"/test-classes.lst
+      - name: Test step
         run: |
-          export MAVEN_OPTS="-Xss64m -Xmx2g -XX:ReservedCodeCacheSize=1g -Dorg.slf4j.simpleLogger.defaultLogLevel=WARN"
-          export MAVEN_CLI_OPTS="--no-transfer-progress"
-          export JAVA_VERSION=${{ env.java }}
-          cd spark-master && ./build/mvn $MAVEN_CLI_OPTS -DskipTests -Pyarn -Pmesos -Pkubernetes -Phive -Phive-thriftserver -Phadoop-cloud -Djava.version=$JAVA_VERSION test-compile
-      - name: Analyze Spark class dependencies
-        run: |
-          ./bin/analyze-spark-deps.sh ./spark-master "${{ env.OUTPUT_PATH }}"
-      - name: List up test classes
-        run: |
-          ./bin/build-deps.py --command list --file-type java --target-package org.apache.spark --root-paths ./spark-master >> "${{ env.OUTPUT_PATH }}"/test-classes.lst
+          mkdir ${{ env.OUTPUT_NAME }}
+          echo 'aaa' >> ${{ env.OUTPUT_NAME }}/test.lst
       - name: Upload output as artifact
         if: success()
         uses: actions/upload-artifact@v2
         with:
           name: spark-dep-graphs
-          path: ./spark-dep-graphs-*
+          # path: ./spark-dep-graphs-*
+          path: ${{ env.OUTPUT_NAME }}
+      - name: Place output in models/spark
+        run: |
+          mv "${{ env.OUTPUT_NAME }}" models/spark/
+      - name: Check
+        run: |
+          echo "${{ github.action }}"
+          echo "${{ github.action_path }}"
+          echo "${{ github.job }}"
+          echo "${{ github.workflow }}"
+          echo "${{ github.run_id }}"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Adds models/spark/${{ env.OUTPUT_NAME }}
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: build-spark-dep-graphs-pullreq
+          delete-branch: true
+          title: 'Adds models/spark/${{ env.OUTPUT_NAME }}'
+          body: |
+            Automated changes by the `${{ github.job}}` workflow (run_id=${{ github.run_id }}).
