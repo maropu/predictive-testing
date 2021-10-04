@@ -561,11 +561,11 @@ def _train_ptest_model(output_path: str, train_log_fpath: str, build_deps: str) 
         .enableHiveSupport() \
         .getOrCreate()
 
-    # Suppress user warinig messages in Python
+    # Suppresses user warinig messages in Python
     import warnings
     warnings.simplefilter("ignore", UserWarning)
 
-    # Supresses `WARN` messages in JVM
+    # Suppresses `WARN` messages in JVM
     spark.sparkContext.setLogLevel("ERROR")
 
     try:
