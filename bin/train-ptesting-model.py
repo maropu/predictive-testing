@@ -274,6 +274,16 @@ def _create_func_to_enumerate_related_tests(spark: SparkSession,
     return _func
 
 
+def _create_func_to_enumerate_all_tests(spark: SparkSession, test_files: Dict[str, str]) -> Any:
+    all_test_df = spark.createDataFrame(list(test_files.items()), ['test', 'path'])
+
+    def _func(df: DataFrame, output_col: str) -> DataFrame:
+        return df.join(all_test_df.selectExpr(f'collect_set(test) {output_col}')) \
+            .withColumn('target_card', funcs.expr(f'size({output_col})'))
+
+    return _func
+
+
 def _create_func_to_enrich_tests(failed_test_df: DataFrame) -> Tuple[Any, List[Dict[str, Any]]]:
     def _intvl(d: int) -> str:
         return f"current_timestamp() - interval {d} days"
@@ -413,7 +423,7 @@ def _create_test_feature_from(df: DataFrame,
                               enrich_tests: Any,
                               compute_minimal_file_distances: Any) -> DataFrame:
     df = _expand_updated_files(df.selectExpr('sha', 'commit_date', 'files'))
-    df = enumerate_related_tests(df, output_col='related_tests', depth=256) \
+    df = enumerate_related_tests(df, output_col='related_tests', depth=64) \
         .selectExpr('*', 'explode_outer(related_tests) test') \
         .drop('related_tests')
     df = enrich_tests(df)
@@ -577,18 +587,31 @@ def _train_ptest_model(output_path: str, train_log_fpath: str, build_deps: str) 
             .withColumnRenamed('sha_', 'sha') \
             .distinct()
 
+        # TODO: 'excluded_tests' should be provided by a user
+        excluded_tests = [
+            'org.apache.spark.sql.kafka010.KafkaRelationSuite',
+            'org.apache.spark.sql.QueryTestSuite',
+        ]
+        excluded_test_df = spark.createDataFrame(pd.DataFrame(excluded_tests, columns=['excluded_test'])) \
+            .selectExpr('collect_set(excluded_test) excluded_tests')
+        df = df.join(excluded_test_df).withColumn('failed_tests_', funcs.expr('array_except(failed_tests, excluded_tests)')) \
+            .drop('failed_tests', 'excluded_tests') \
+            .withColumnRenamed('failed_tests_', 'failed_tests')
+
         train_df, test_df = _train_test_split(df, test_ratio=0.20)
         _logger.info(f"Split data: #total={df.count()}, #train={train_df.count()}, #test={test_df.count()}")
 
         enumerate_related_tests = _create_func_to_enumerate_related_tests(spark, rev_dep_graph, test_files)
+        enumerate_all_tests = _create_func_to_enumerate_all_tests(spark, test_files)
         enrich_tests, failed_tests = _create_func_to_enrich_tests(train_df)
         compute_distances = _create_func_to_compute_distances(
             spark, test_files, lambda x, y: len(set(x.split('/')) ^ set(y.split('/'))) - 2)
 
-        def _to_features(f: Any, df: DataFrame) -> Any:
-            return f(df, enumerate_related_tests, enrich_tests, compute_distances)
+        def _to_features(df: DataFrame, f: Any, enumerate_tests: Any) -> Any:
+            return f(df, enumerate_tests, enrich_tests, compute_distances)
 
-        clf = _build_predictive_model(_to_features(_create_train_feature_from, df))
+        features = _to_features(df, _create_train_feature_from, enumerate_related_tests)
+        clf = _build_predictive_model(features)
 
         with open(f"{output_path}/failed-tests.json", 'w') as f:
             f.write(json.dumps(failed_tests, indent=2))
@@ -596,8 +619,10 @@ def _train_ptest_model(output_path: str, train_log_fpath: str, build_deps: str) 
             import pickle
             pickle.dump(clf, f)  # type: ignore
 
-        predicted = _predict_failed_probs(spark, clf, _to_features(_create_test_feature_from, test_df))
-        metrics = _compute_eval_metrics(test_df, predicted, eval_num_tests=list(range(4, 241, 4)))
+        # features = _to_features(test_df, _create_test_feature_from, enumerate_all_tests)
+        features = _to_features(test_df, _create_test_feature_from, enumerate_related_tests)
+        predicted = _predict_failed_probs(spark, clf, features)
+        metrics = _compute_eval_metrics(test_df, predicted, eval_num_tests=list(range(4, 2001, 4)))
 
         with open(f"{output_path}/model-eval-metric-summary.md", 'w') as f:  # type: ignore
             f.write(_format_eval_metrics([metrics[i] for i in [0, 14, 29, 44, 59]]))  # type: ignore
