@@ -124,6 +124,7 @@ def main() -> None:
 
     java_files = list(({**java_classes, **java_tests}).items())
     extract_edges_from_path = javaclass.create_func_to_extract_refs_from_class_file('org.apache.spark')
+    # dep_graph = depgraph.build_dependency_graphs(java_files[0:100], extract_edges_from_path)
     dep_graph = depgraph.build_dependency_graphs(java_files, extract_edges_from_path)
     _write_data_as('dep-graph', args.output, dep_graph)
 
