@@ -18,7 +18,7 @@
 #
 
 #
-# Train a predictive testing model for Apache Spark
+# Predicts a preferred test set with a given predictive model
 
 FWDIR="$(cd "`dirname $0`"/..; pwd)"
 
@@ -27,12 +27,33 @@ if [ ! -z "$CONDA_ENABLED" ]; then
   . ${FWDIR}/bin/conda.sh && activate_conda_virtual_env "${FWDIR}"
 fi
 
+print_err_msg_and_exit() {
+  echo "Required arguments not specified and usage: ${0} <root_paths> <#commits> <#selected_tests>" 1>&2
+  exit 1
+}
+
+TARGET_PATH="$1"
+if [ -z "${TARGET_PATH}" ]; then
+  print_err_msg_and_exit
+fi
+
+NUM_COMMITS="$2"
+if [ -z "${NUM_COMMITS}" ]; then
+  print_err_msg_and_exit
+fi
+
+NUM_SELECTED_TESTS="$3"
+if [ -z "${NUM_SELECTED_TESTS}" ]; then
+  print_err_msg_and_exit
+fi
+
 PYTHONPATH="${FWDIR}/python" \
 exec python3 -u ${FWDIR}/bin/ptesting-model.py \
-  --train \
-  --output ${FWDIR}/models/spark \
-  --train-log-data ${FWDIR}/models/spark/logs/github-logs.json \
+  --target ${TARGET_PATH} \
+  --num-commits ${NUM_COMMITS} \
+  --num-selected-tests ${NUM_SELECTED_TESTS} \
+  --model ${FWDIR}/models/spark/model.pkl \
   --test-files ${FWDIR}/models/spark/indexes/latest/test-files.json \
-  --excluded-tests ${FWDIR}/models/spark/logs/excluded-tests.json \
+  --failed-tests ${FWDIR}/models/spark/failed-tests.json \
   --build-dep ${FWDIR}/models/spark/indexes/latest/dep-graph.json \
   --contributor-stats ${FWDIR}/models/spark/logs/contributor-stats.json

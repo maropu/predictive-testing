@@ -20,6 +20,7 @@
 import json
 import os
 import pandas as pd  # type: ignore[import]
+import pickle
 from pyspark.sql import Column, DataFrame, SparkSession, functions as funcs
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -60,16 +61,11 @@ def _create_func_to_transform_path_to_qualified_name() -> Any:
 
 
 def _create_func_to_enrich_authors(spark: SparkSession, contributor_stats: Optional[List[Tuple[str, str]]]) -> Any:
-    if contributor_stats:
-        contributor_stat_df = spark.createDataFrame(contributor_stats, schema='author: string, num_commits: int')
+    if not contributor_stats:
+        return lambda df: df.withColumn('num_commits', funcs.expr('0'))
 
-        def _func(df: DataFrame) -> DataFrame:
-            return df.join(contributor_stat_df, 'author', 'LEFT_OUTER') \
-                .na.fill({'num_commits': 0})
-
-        return _func
-    else:
-        return lambda x: x
+    contributor_stat_df = spark.createDataFrame(contributor_stats, schema='author: string, num_commits: int')
+    return lambda df: df.join(contributor_stat_df, 'author', 'LEFT_OUTER').na.fill({'num_commits': 0})
 
 
 def _create_func_to_enumerate_related_tests(spark: SparkSession,
@@ -359,7 +355,8 @@ def _build_predictive_model(df: DataFrame, to_features: Any) -> Any:
     X = pdf[pdf.columns[pdf.columns != 'failed']]  # type: ignore
     y = pdf['failed']
     X, y = train.rebalance_training_data(X, y)
-    clf, score = train.build_model(X, y, opts={'hp.timeout': '3600', 'hp.no_progress_loss': '1000'})
+    # clf, score = train.build_model(X, y, opts={'hp.timeout': '3600', 'hp.no_progress_loss': '1000'})
+    clf, score = train.build_model(X, y, opts={'hp.timeout': '3600', 'hp.no_progress_loss': '1'})
     _logger.info(f"model score: {score}")
     return clf
 
@@ -371,17 +368,17 @@ def _train_test_split(df: DataFrame, test_ratio: float) -> Tuple[DataFrame, Data
     return train_df, test_df
 
 
-def _predict_failed_probs(test_df: DataFrame, clf: Any, to_features: Any) -> DataFrame:
+def _predict_failed_probs_for_tests(test_df: DataFrame, clf: Any, to_features: Any) -> DataFrame:
     test_feature_df = to_features(test_df)
-    df = test_feature_df.selectExpr('sha', 'target_card', 'test').toPandas()
+    pdf = test_feature_df.selectExpr('sha', 'target_card', 'test').toPandas()
     X = test_feature_df.drop('sha', 'target_card', 'failed', 'test').toPandas()
     predicted = clf.predict_proba(X)
     pmf = map(lambda p: {"classes": clf.classes_.tolist(), "probs": p.tolist()}, predicted)
     pmf = map(lambda p: json.dumps(p), pmf)  # type: ignore
-    df['predicted'] = pd.Series(list(pmf))
+    pdf['predicted'] = pd.Series(list(pmf))
     to_map_expr = funcs.expr('from_json(predicted, "classes array<string>, probs array<double>")')
     to_failed_prob = 'map_from_arrays(pmf.classes, pmf.probs)["1"] failed_prob'
-    df_with_failed_probs = test_df.sql_ctx.sparkSession.createDataFrame(df) \
+    df_with_failed_probs = test_df.sql_ctx.sparkSession.createDataFrame(pdf) \
         .withColumn('pmf', to_map_expr) \
         .selectExpr('sha', 'target_card', 'test', to_failed_prob)
 
@@ -394,10 +391,30 @@ def _predict_failed_probs(test_df: DataFrame, clf: Any, to_features: Any) -> Dat
              funcs.expr('collect_set(named_struct("test", test, "failed_prob", failed_prob))').alias('tests')) \
         .selectExpr('sha', 'target_card', f'array_sort(tests, (l, r) -> {compare("l", "r")}) tests')
 
-    predicted = test_df.selectExpr('sha', 'failed_tests').join(df_with_failed_probs, 'sha', 'LEFT_OUTER') \
-        .selectExpr('sha', 'target_card', 'failed_tests', 'coalesce(tests, array()) tests') \
+    return df_with_failed_probs
 
-    return predicted
+
+def _predict_failed_probs(df: DataFrame, clf: Any) -> DataFrame:
+    pdf = df.toPandas()
+    predicted = clf.predict_proba(pdf.drop('test', axis=1))
+    pmf = map(lambda p: {"classes": clf.classes_.tolist(), "probs": p.tolist()}, predicted)
+    pmf = map(lambda p: json.dumps(p), pmf)  # type: ignore
+    pdf['predicted'] = pd.Series(list(pmf))
+    to_map_expr = funcs.expr('from_json(predicted, "classes array<string>, probs array<double>")')
+    to_failed_prob = 'map_from_arrays(pmf.classes, pmf.probs)["1"] failed_prob'
+    df_with_failed_probs = df.sql_ctx.sparkSession.createDataFrame(pdf[['test', 'predicted']]) \
+        .withColumn('pmf', to_map_expr) \
+        .selectExpr('test', to_failed_prob)
+
+    compare = lambda x, y: \
+        f"case when {x}.failed_prob < {y}.failed_prob then 1 " \
+        f"when {x}.failed_prob > {y}.failed_prob then -1 " \
+        "else 0 end"
+    df_with_failed_probs = df_with_failed_probs \
+        .selectExpr('collect_set(named_struct("test", test, "failed_prob", failed_prob)) tests') \
+        .selectExpr(f'array_sort(tests, (l, r) -> {compare("l", "r")}) tests')
+
+    return df_with_failed_probs
 
 
 def _compute_eval_stats(df: DataFrame) -> DataFrame:
@@ -493,11 +510,12 @@ def _train_and_eval_ptest_model(output_path: str, spark: SparkSession, df: DataF
     with open(f"{output_path}/failed-tests.json", 'w') as f:
         f.write(json.dumps(failed_tests, indent=2))
     with open(f"{output_path}/model.pkl", 'wb') as f:  # type: ignore
-        import pickle
         pickle.dump(clf, f)  # type: ignore
 
     to_features = lambda df: _to_features(df, _create_test_feature_from, enumerate_all_tests)
-    predicted = _predict_failed_probs(test_df, clf, to_features)
+    predicted = _predict_failed_probs_for_tests(test_df, clf, to_features)
+    predicted = test_df.selectExpr('sha', 'failed_tests').join(predicted, 'sha', 'LEFT_OUTER') \
+        .selectExpr('sha', 'target_card', 'failed_tests', 'coalesce(tests, array()) tests')
 
     metrics = _compute_eval_metrics(predicted, eval_num_tests=list(range(4, len(test_files) + 1, 4)))
     stats = _compute_eval_stats(predicted)
@@ -512,25 +530,25 @@ def _train_and_eval_ptest_model(output_path: str, spark: SparkSession, df: DataF
     _save_metrics_as_chart(f"{output_path}/model-eval-metrics.svg", metrics, len(test_files))
 
 
-def main() -> None:
-    # Parses command-line arguments
+def train_main(argv: Any) -> None:
+    # Parses command-line arguments for a training mode
     from argparse import ArgumentParser
     parser = ArgumentParser()
     parser.add_argument('--output', type=str, required=True)
     parser.add_argument('--train-log-data', type=str, required=True)
-    parser.add_argument('--tests', type=str, required=True)
+    parser.add_argument('--test-files', type=str, required=True)
     parser.add_argument('--contributor-stats', type=str, required=False)
     # TODO: Makes `--build-dep` optional
     parser.add_argument('--build-dep', type=str, required=True)
     parser.add_argument('--excluded-tests', type=str, required=False)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if not os.path.exists(args.output) or not os.path.isdir(args.output):
         raise ValueError(f"Output directory not found in {os.path.abspath(args.output)}")
     if not os.path.exists(args.train_log_data):
         raise ValueError(f"Training data not found in {os.path.abspath(args.train_log_data)}")
-    if not os.path.exists(args.tests):
-        raise ValueError(f"Test list file not found in {os.path.abspath(args.tests)}")
+    if not os.path.exists(args.test_files):
+        raise ValueError(f"Test list file not found in {os.path.abspath(args.test_files)}")
     if args.contributor_stats and not os.path.exists(args.contributor_stats):
         raise ValueError(f"Contributor stats not found in {os.path.abspath(args.contributor_stats)}")
     if args.build_dep and not os.path.exists(args.build_dep):
@@ -539,7 +557,7 @@ def main() -> None:
         raise ValueError(f"Excluded test list file not found in {os.path.abspath(args.excluded_tests)}")
 
     from pathlib import Path
-    test_files = json.loads(Path(args.tests).read_text())
+    test_files = json.loads(Path(args.test_files).read_text())
     contributor_stats = json.loads(Path(args.contributor_stats).read_text()) \
         if args.contributor_stats else None
     dep_graph = json.loads(Path(args.build_dep).read_text()) \
@@ -596,6 +614,104 @@ def main() -> None:
                                     contributor_stats, test_ratio=0.10)
     finally:
         spark.stop()
+
+
+def predict_main(argv: Any) -> None:
+    # Parses command-line arguments for a prediction mode
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument('--target', type=str, required=True)
+    parser.add_argument('--num-commits', type=int, required=True)
+    parser.add_argument('--num-selected-tests', type=int, required=True)
+    parser.add_argument('--model', type=str, required=True)
+    parser.add_argument('--test-files', type=str, required=True)
+    parser.add_argument('--failed-tests', type=str, required=True)
+    parser.add_argument('--contributor-stats', type=str, required=False)
+    # TODO: Makes `--build-dep` optional
+    parser.add_argument('--build-dep', type=str, required=True)
+    args = parser.parse_args(argv)
+
+    if not os.path.isdir(f'{args.target}/.git'):
+        raise ValueError(f"Git-managed directory not found in {os.path.abspath(args.target)}")
+    if args.num_commits <= 0:
+        raise ValueError(f"Target #commits must be positive, but {args.num_commits}")
+    if args.num_selected_tests <= 0:
+        raise ValueError(f"Predicted #tests must be positive, but {args.num_selected_tests}")
+    if not os.path.exists(args.model):
+        raise ValueError(f"Predictive model not found in {os.path.abspath(args.model)}")
+    if not os.path.exists(args.test_files):
+        raise ValueError(f"Test list file not found in {os.path.abspath(args.test_files)}")
+    if not os.path.exists(args.failed_tests):
+        raise ValueError(f"Failed test list file not found in {os.path.abspath(args.failed_tests)}")
+    if args.contributor_stats and not os.path.exists(args.contributor_stats):
+        raise ValueError(f"Contributor stats not found in {os.path.abspath(args.contributor_stats)}")
+    if args.build_dep and not os.path.exists(args.build_dep):
+        raise ValueError(f"Dependency graph file not found in {os.path.abspath(args.build_dep)}")
+
+    from pathlib import Path
+    clf = pickle.loads(Path(args.model).read_bytes())
+    test_files = json.loads(Path(args.test_files).read_text())
+    failed_tests = json.loads(Path(args.failed_tests).read_text())
+    contributor_stats = json.loads(Path(args.contributor_stats).read_text()) \
+        if args.contributor_stats else None
+    dep_graph = json.loads(Path(args.build_dep).read_text()) \
+        if args.build_dep else None
+
+    # Initializes a Spark session
+    spark = SparkSession.builder \
+        .enableHiveSupport() \
+        .getOrCreate()
+
+    # Suppresses user warinig messages in Python
+    import warnings
+    warnings.simplefilter("ignore", UserWarning)
+
+    # Suppresses `WARN` messages in JVM
+    spark.sparkContext.setLogLevel("ERROR")
+
+    try:
+        commit_info = [{
+            'num_commits': 0,
+            'udpated_num_3d': 0,
+            'udpated_num_14d': 0,
+            'udpated_num_56d': 0,
+            'num_adds': 0,
+            'num_dels': 0,
+            'num_chgs': 0
+        }]
+
+        compute_distances = _create_func_to_compute_distances(spark, dep_graph, test_files)
+        commit_df = spark.createDataFrame(pd.DataFrame(commit_info)) \
+            .withColumn('filenames', funcs.expr('array("README.md")')) \
+            .withColumn('file_card', funcs.expr('size(filenames)'))
+
+        all_test_df = spark.createDataFrame(list(test_files.items()), ['test', 'path']) \
+            .selectExpr('test', '0 failed_num_7d', '0 failed_num_14d', '0 failed_num_28d', '0 total_failed_num')
+        all_test_df = compute_distances(all_test_df.join(commit_df), 'filenames', 'test') \
+            .drop('filenames')
+
+        predicted = _predict_failed_probs(all_test_df, clf)
+        selected_test_df = predicted \
+            .selectExpr(f'slice(tests, 1, {args.num_selected_tests}) selected_tests') \
+            .selectExpr('selected_tests.test selected_tests')
+
+        selected_tests = selected_test_df.collect()[0].selected_tests
+        print(json.dumps(selected_tests, indent=2))
+    finally:
+        spark.stop()
+
+
+def main() -> None:
+    # Checks if a training mode enabled or not first
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser.add_argument('--train', dest='train_mode_enabled', action='store_true')
+    args, rest_argv = parser.parse_known_args()
+
+    if args.train_mode_enabled:
+        train_main(rest_argv)
+    else:
+        predict_main(rest_argv)
 
 
 if __name__ == '__main__':
