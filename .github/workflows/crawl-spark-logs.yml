@@ -115,6 +115,23 @@ jobs:
         run: |
           mv latest_output output
           ./bin/crawl-spark-github-logs.sh --output output --resume
+      - name: Appends the collected logs into `models/spark/logs/github-logs.json`
+        if: success()
+        run: cat output/github-logs.json >> models/spark/logs/github-logs.json
+      - name: Create Pull Request
+        if: success()
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Appends the collected logs (since='${{ env.SINCE_DATE }}') into `models/spark/logs/github-logs.json`
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: crawl-spark-logs-${{ github.job }}-${{ github.run_id }}
+          delete-branch: true
+          title: Appends the collected logs (since='${{ env.SINCE_DATE }}') into `models/spark/logs/github-logs.json`
+          body: |
+            Automated changes by the `${{ github.job }}` workflow (run_id=${{ github.run_id }}).
       - name: Upload output as artifact
         if: always()
         uses: actions/upload-artifact@v2

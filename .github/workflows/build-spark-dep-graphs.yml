@@ -54,12 +54,6 @@ jobs:
           cd models/spark/indexes
           rm latest
           ln -s ${{ env.OUTPUT_NAME }} latest
-      - name: Upload output as artifact
-        if: success()
-        uses: actions/upload-artifact@v2
-        with:
-          name: spark-index-${{env.OUTPUT_NAME}}
-          path: ${{ env.OUTPUT_NAME }}
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v3
@@ -74,3 +68,9 @@ jobs:
           title: Adds latest snapshot in `models/spark/indexes/${{ env.OUTPUT_NAME }}`
           body: |
             Automated changes by the `${{ github.job }}` workflow (run_id=${{ github.run_id }}).
+      - name: Upload output as artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: spark-index-${{env.OUTPUT_NAME}}
+          path: ${{ env.OUTPUT_NAME }}
