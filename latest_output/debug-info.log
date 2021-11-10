@@ -1,0 +1,745 @@
+2021-11-10 08:30:44.249 INFO crawl-github-logs: rate_limit: limit=5000, used=0, remaining=5000, reset=3600s
+2021-11-10 08:30:44.249 INFO crawl-github-logs: Fetching candidate pull requests in apache/spark...
+2021-11-10 08:30:46.388 INFO github_apis: api:/repos/apache/spark/pulls, params:{'page': '1', 'per_page': '100', 'state': 'all', 'sort': 'updated', 'direction': 'desc'}, list length:100
+2021-11-10 08:30:46.841 INFO github_apis: api:/repos/apache/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:51.917 INFO github_apis: api:/repos/apache/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443233369, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443169003, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443127124, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443087458, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443064916, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443056875, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443010281, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1443000925, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442970623, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442952867, run_name='On pull request update') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442952864, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442941291, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442906099, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442900133, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442900132, run_name='On pull request update') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442883594, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442852055, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442818901, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442818900, run_name='On pull request update') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442814972, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442784566, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442784565, run_name='On pull request update') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442779705, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442751169, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442737368, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442737366, run_name='On pull request update') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442736385, run_name='On pull requests') skipped
+2021-11-10 08:30:52.040 INFO github_utils: Run (run_id=1442736384, run_name='On pull request update') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442717682, run_name='On pull request update') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442717681, run_name='On pull requests') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442705202, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442678041, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442670047, run_name='Report test results') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442652285, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442619843, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442574960, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442570811, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442566720, run_name='On pull requests') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442566718, run_name='On pull request update') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442536830, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442509240, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442482065, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442481189, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442460210, run_name='Report test results') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442459375, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442428450, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442400688, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442375481, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442339014, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442285307, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442250580, run_name='On pull request update') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442250579, run_name='On pull requests') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442236511, run_name='On pull request update') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442236510, run_name='On pull requests') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442225614, run_name='Report test results') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442222510, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442213373, run_name='Report test results') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442182955, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442160540, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442082255, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1442019240, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.041 INFO github_utils: Run (run_id=1441977209, run_name='Close stale PRs') skipped
+2021-11-10 08:30:52.042 INFO github_utils: Run (run_id=1441974085, run_name='On pull request update') skipped
+2021-11-10 08:30:52.042 INFO github_utils: Run (run_id=1441974069, run_name='On pull requests') skipped
+2021-11-10 08:30:52.042 INFO github_utils: Run (run_id=1441960227, run_name='Publish Snapshot') skipped
+2021-11-10 08:30:52.042 INFO github_utils: Run (run_id=1441952978, run_name='Update build status workflow') skipped
+2021-11-10 08:30:52.111 INFO github_utils: run_id:1442458925, run_name:Build and test, event:push, head_sha=e1f3f22c3dabfea27880e02cbb5df6533c875795
+2021-11-10 08:30:52.229 INFO github_apis: api:/repos/apache/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:30:52.376 INFO github_apis: api:/repos/apache/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:30:52.379 INFO github_utils: run_id:1442182808, run_name:Build and test, event:schedule, head_sha=abecdfe831805fb53fa949558ea7a5ca9042e465
+2021-11-10 08:30:52.515 INFO github_apis: api:/repos/apache/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:30:52.640 INFO github_apis: api:/repos/apache/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:30:52.643 INFO github_utils: 1 test results found in workflows (apache/spark)
+2021-11-10 08:30:52.644 INFO crawl-github-logs: pr_user:linhongliu-db, pr_repo:spark, #pullreqs:2
+2021-11-10 08:30:52.765 INFO github_apis: api:/repos/linhongliu-db/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:54.327 INFO github_apis: api:/repos/linhongliu-db/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442737375, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442736379, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442702081, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442685896, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442647791, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442587624, run_name='Report test results') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442586774, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442571371, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442537210, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442517981, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442495893, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442427017, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442405038, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442373903, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442295367, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442192145, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442127937, run_name='Publish Snapshot') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1442084502, run_name='Close stale PRs') skipped
+2021-11-10 08:30:54.351 INFO github_utils: Run (run_id=1441991728, run_name='Update build status workflow') skipped
+2021-11-10 08:30:54.352 INFO github_utils: run_id:1442586708, run_name:Build and test, event:schedule, head_sha=e1e19619b7366ad71ebaa3f11edf297c33c0f493
+2021-11-10 08:30:54.434 INFO github_apis: api:/repos/linhongliu-db/spark/commits/e1e19619b7366ad71ebaa3f11edf297c33c0f493, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:54.512 INFO github_apis: api:/repos/linhongliu-db/spark/commits/e1e19619b7366ad71ebaa3f11edf297c33c0f493, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:54.514 INFO github_utils: 1 test results found in workflows (linhongliu-db/spark)
+2021-11-10 08:30:54.658 INFO github_apis: api:/repos/apache/spark/pulls/34528/commits, params:{'page': '1', 'per_page': '100'}, list length:4
+2021-11-10 08:30:54.659 INFO github_utils: pullreq#34528 has 0 commits (created_at:2021-11-09T05:17:59Z, updated_at:2021-11-10T08:23:46Z)
+2021-11-10 08:30:54.831 INFO github_apis: api:/repos/apache/spark/pulls/34473/commits, params:{'page': '1', 'per_page': '100'}, list length:5
+2021-11-10 08:30:54.833 INFO github_utils: pullreq#34473 has 0 commits (created_at:2021-11-03T04:56:48Z, updated_at:2021-11-10T05:33:49Z)
+2021-11-10 08:30:57.073 INFO crawl-github-logs: pr_user:sarutak, pr_repo:spark, #pullreqs:1
+2021-11-10 08:30:57.178 INFO github_apis: api:/repos/sarutak/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:58.550 INFO github_apis: api:/repos/sarutak/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:30:58.573 INFO github_utils: Run (run_id=1442590273, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442585939, run_name='Report test results') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442577090, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442539474, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442522339, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442511487, run_name='Report test results') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442498215, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442496436, run_name='Report test results') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442459699, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442454492, run_name='Report test results') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442453812, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442445500, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442392958, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442319375, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442285708, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442256026, run_name='Report test results') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442255246, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442210967, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442209751, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442101392, run_name='Publish Snapshot') skipped
+2021-11-10 08:30:58.574 INFO github_utils: Run (run_id=1442019714, run_name='Update build status workflow') skipped
+2021-11-10 08:30:58.575 INFO github_utils: run_id:1442576990, run_name:Build and test, event:schedule, head_sha=39ad0d782cd708462d9dbd870fd23d7bb7c091a3
+2021-11-10 08:30:58.656 INFO github_apis: api:/repos/sarutak/spark/commits/39ad0d782cd708462d9dbd870fd23d7bb7c091a3, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:58.739 INFO github_apis: api:/repos/sarutak/spark/commits/39ad0d782cd708462d9dbd870fd23d7bb7c091a3, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:58.740 INFO github_utils: run_id:1442453758, run_name:Build and test, event:push, head_sha=e8dce878f064e98ef358367df03dd2692985a892
+2021-11-10 08:30:58.877 INFO github_apis: api:/repos/sarutak/spark/commits/e8dce878f064e98ef358367df03dd2692985a892, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:58.998 INFO github_apis: api:/repos/sarutak/spark/commits/e8dce878f064e98ef358367df03dd2692985a892, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:59.105 INFO github_apis: api:/repos/sarutak/spark/actions/runs/1442453758/jobs, params:{'per_page': '1'}, top-level keys:jobs,total_count
+2021-11-10 08:30:59.332 INFO github_apis: api:/repos/sarutak/spark/actions/runs/1442453758/jobs, params:{'page': '0', 'per_page': '100'}, top-level keys:jobs,total_count
+2021-11-10 08:30:59.333 INFO github_utils: Job (run_id=1442453758, job_id=4160642975) skipped
+2021-11-10 08:30:59.333 INFO github_utils: Job (run_id=1442453758, job_id=4160644633) skipped
+2021-11-10 08:30:59.334 INFO github_utils: Job (run_id=1442453758, job_id=4160644746) skipped
+2021-11-10 08:30:59.334 INFO github_utils: Job (run_id=1442453758, job_id=4160644799) skipped
+2021-11-10 08:30:59.334 INFO github_utils: Job (run_id=1442453758, job_id=4160644847) skipped
+2021-11-10 08:30:59.334 INFO github_utils: Job (run_id=1442453758, job_id=4160644879) skipped
+2021-11-10 08:30:59.334 INFO github_utils: Job (run_id=1442453758, job_id=4160644919) skipped
+2021-11-10 08:30:59.335 INFO github_utils: run_id:1442285679, run_name:Build and test, event:push, head_sha=43955e1a2327e191d887fc10b7949a8fc339b8af
+2021-11-10 08:30:59.419 INFO github_apis: api:/repos/sarutak/spark/commits/43955e1a2327e191d887fc10b7949a8fc339b8af, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:59.543 INFO github_apis: api:/repos/sarutak/spark/commits/43955e1a2327e191d887fc10b7949a8fc339b8af, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:59.544 INFO github_utils: run_id:1442255134, run_name:Build and test, event:schedule, head_sha=39ad0d782cd708462d9dbd870fd23d7bb7c091a3
+2021-11-10 08:30:59.622 INFO github_apis: api:/repos/sarutak/spark/commits/39ad0d782cd708462d9dbd870fd23d7bb7c091a3, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:59.715 INFO github_apis: api:/repos/sarutak/spark/commits/39ad0d782cd708462d9dbd870fd23d7bb7c091a3, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:30:59.717 INFO github_utils: 1 test results found in workflows (sarutak/spark)
+2021-11-10 08:30:59.903 INFO github_apis: api:/repos/apache/spark/pulls/34541/commits, params:{'page': '1', 'per_page': '100'}, list length:3
+2021-11-10 08:31:00.030 INFO github_apis: api:/repos/apache/spark/pulls/34541/commits, params:{'page': '2', 'per_page': '100'}, list length:0
+2021-11-10 08:31:00.030 INFO github_utils: pullreq#34541 has 3 commits (created_at:2021-11-10T05:06:03Z, updated_at:2021-11-10T08:21:59Z)
+2021-11-10 08:31:00.031 INFO github_utils: commit:b961ebe68e708e50682be54f78c85cdf6432b19f, commit_date:2021-11-10T04:22:49Z
+2021-11-10 08:31:00.031 INFO github_utils: commit:d997ca911b655c0ac9b78f19cfbd23783dc01835, commit_date:2021-11-10T04:59:27Z
+2021-11-10 08:31:00.031 INFO github_utils: commit:2a9e4254472694bc4ae74bfb6d2acc75bedce8c1, commit_date:2021-11-10T05:47:27Z
+2021-11-10 08:31:01.930 INFO crawl-github-logs: pr_user:gengliangwang, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:02.072 INFO github_apis: api:/repos/gengliangwang/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:03.877 INFO github_apis: api:/repos/gengliangwang/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1443028649, run_name='Report test results') skipped
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1443027782, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1442900130, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1442608260, run_name='Report test results') skipped
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1442607741, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:03.898 INFO github_utils: Run (run_id=1442006610, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:03.899 INFO github_utils: run_id:1443027662, run_name:Build and test, event:schedule, head_sha=aa58935cddd9932f045f05af74beac88a0ef6ade
+2021-11-10 08:31:03.993 INFO github_apis: api:/repos/gengliangwang/spark/commits/aa58935cddd9932f045f05af74beac88a0ef6ade, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:04.100 INFO github_apis: api:/repos/gengliangwang/spark/commits/aa58935cddd9932f045f05af74beac88a0ef6ade, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:04.100 INFO github_utils: run_id:1442607651, run_name:Build and test, event:schedule, head_sha=aa58935cddd9932f045f05af74beac88a0ef6ade
+2021-11-10 08:31:04.229 INFO github_apis: api:/repos/gengliangwang/spark/commits/aa58935cddd9932f045f05af74beac88a0ef6ade, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:04.317 INFO github_apis: api:/repos/gengliangwang/spark/commits/aa58935cddd9932f045f05af74beac88a0ef6ade, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:04.319 INFO github_utils: 1 test results found in workflows (gengliangwang/spark)
+2021-11-10 08:31:04.511 INFO github_apis: api:/repos/apache/spark/pulls/34495/commits, params:{'page': '1', 'per_page': '100'}, list length:4
+2021-11-10 08:31:04.512 INFO github_utils: pullreq#34495 has 0 commits (created_at:2021-11-05T13:29:50Z, updated_at:2021-11-10T08:06:07Z)
+2021-11-10 08:31:05.284 INFO crawl-github-logs: pr_user:AngersZhuuuu, pr_repo:spark, #pullreqs:2
+2021-11-10 08:31:05.399 INFO github_apis: api:/repos/AngersZhuuuu/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:07.546 INFO github_apis: api:/repos/AngersZhuuuu/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443241610, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443143796, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443105942, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443052932, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443026295, run_name='Report test results') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1443025330, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442966956, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442913806, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442828890, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442796983, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442744288, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442679738, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442630946, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442621125, run_name='Report test results') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442618139, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442553401, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442527904, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442482894, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442413759, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442383277, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442291289, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442276826, run_name='Report test results') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442276390, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442140808, run_name='Update build status workflow') skipped
+2021-11-10 08:31:07.569 INFO github_utils: Run (run_id=1442075891, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:07.570 INFO github_utils: run_id:1443025263, run_name:Build and test, event:schedule, head_sha=502a1ec4cf819187e966b4f1462189242b80e9ee
+2021-11-10 08:31:07.663 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:07.756 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:07.758 INFO github_utils: run_id:1442618072, run_name:Build and test, event:schedule, head_sha=502a1ec4cf819187e966b4f1462189242b80e9ee
+2021-11-10 08:31:07.855 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:07.951 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:07.953 INFO github_utils: run_id:1442276327, run_name:Build and test, event:schedule, head_sha=502a1ec4cf819187e966b4f1462189242b80e9ee
+2021-11-10 08:31:08.048 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:08.148 INFO github_apis: api:/repos/AngersZhuuuu/spark/commits/502a1ec4cf819187e966b4f1462189242b80e9ee, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:08.150 INFO github_utils: 1 test results found in workflows (AngersZhuuuu/spark)
+2021-11-10 08:31:08.296 INFO github_apis: api:/repos/apache/spark/pulls/34535/commits, params:{'page': '1', 'per_page': '100'}, list length:3
+2021-11-10 08:31:08.297 INFO github_utils: pullreq#34535 has 0 commits (created_at:2021-11-09T14:34:53Z, updated_at:2021-11-10T07:33:13Z)
+2021-11-10 08:31:08.445 INFO github_apis: api:/repos/apache/spark/pulls/34453/commits, params:{'page': '1', 'per_page': '100'}, list length:3
+2021-11-10 08:31:08.446 INFO github_utils: pullreq#34453 has 0 commits (created_at:2021-11-01T03:29:59Z, updated_at:2021-11-10T06:17:02Z)
+2021-11-10 08:31:14.077 INFO crawl-github-logs: pr_user:Ngone51, pr_repo:spark, #pullreqs:2
+2021-11-10 08:31:14.255 INFO github_apis: api:/repos/Ngone51/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:15.764 INFO github_apis: api:/repos/Ngone51/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:15.787 INFO github_utils: Run (run_id=1442521393, run_name='Report test results') skipped
+2021-11-10 08:31:15.787 INFO github_utils: Run (run_id=1442250582, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:15.788 INFO github_utils: run_id:1442250553, run_name:Build and test, event:push, head_sha=ce22c0968fe86dbbdee31bceb233071c43d02c8f
+2021-11-10 08:31:15.924 INFO github_apis: api:/repos/Ngone51/spark/compare/abecdfe831805fb53fa949558ea7a5ca9042e465...ce22c0968fe86dbbdee31bceb233071c43d02c8f, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:31:16.045 INFO github_apis: api:/repos/Ngone51/spark/compare/abecdfe831805fb53fa949558ea7a5ca9042e465...ce22c0968fe86dbbdee31bceb233071c43d02c8f, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:31:16.047 INFO github_utils: 1 test results found in workflows (Ngone51/spark)
+2021-11-10 08:31:17.376 INFO github_apis: api:/repos/apache/spark/pulls/34536/commits, params:{'page': '1', 'per_page': '100'}, list length:2
+2021-11-10 08:31:17.377 INFO github_utils: pullreq#34536 has 0 commits (created_at:2021-11-09T15:13:49Z, updated_at:2021-11-10T07:24:55Z)
+2021-11-10 08:31:17.512 INFO github_apis: api:/repos/apache/spark/pulls/34534/commits, params:{'page': '1', 'per_page': '100'}, list length:1
+2021-11-10 08:31:17.513 INFO github_utils: pullreq#34534 has 0 commits (created_at:2021-11-09T13:12:13Z, updated_at:2021-11-10T01:20:42Z)
+2021-11-10 08:31:17.872 INFO crawl-github-logs: pr_user:sleep1661, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:17.984 INFO github_apis: api:/repos/sleep1661/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:19.311 INFO github_apis: api:/repos/sleep1661/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443263672, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443237651, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443182552, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443126646, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443089045, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443068263, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443020816, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1443010483, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1442977736, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.333 INFO github_utils: Run (run_id=1442932433, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442865782, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442814191, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442779722, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442758014, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442708745, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442686573, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442648895, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442602357, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442584582, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442538194, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442520002, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442496930, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442437909, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442391948, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442318721, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442240166, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442236501, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442236474, run_name='Build and test') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442209262, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442066918, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442014048, run_name='Close stale PRs') skipped
+2021-11-10 08:31:19.334 INFO github_utils: Run (run_id=1442004032, run_name='Update build status workflow') skipped
+2021-11-10 08:31:19.334 INFO github_utils: run_id:1443237556, run_name:Build and test, event:push, head_sha=16e26049afc8ba92b06bdc58c47b211ea87e0d2b
+2021-11-10 08:31:19.463 INFO github_apis: api:/repos/sleep1661/spark/commits/16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:19.547 INFO github_apis: api:/repos/sleep1661/spark/commits/16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:19.644 INFO github_apis: api:/repos/sleep1661/spark/actions/runs/1443237556/jobs, params:{'per_page': '1'}, top-level keys:jobs,total_count
+2021-11-10 08:31:20.038 INFO github_apis: api:/repos/sleep1661/spark/actions/runs/1443237556/jobs, params:{'page': '0', 'per_page': '100'}, top-level keys:jobs,total_count
+2021-11-10 08:31:20.041 INFO github_utils: Job (run_id=1443237556, job_id=4162639659) skipped
+2021-11-10 08:31:20.041 INFO github_utils: Job (run_id=1443237556, job_id=4162641352) skipped
+2021-11-10 08:31:20.041 INFO github_utils: Job (run_id=1443237556, job_id=4162641391) skipped
+2021-11-10 08:31:20.042 INFO github_utils: Job (run_id=1443237556, job_id=4162641455) skipped
+2021-11-10 08:31:20.042 INFO github_utils: Job (run_id=1443237556, job_id=4162641743) skipped
+2021-11-10 08:31:20.042 INFO github_utils: Job (run_id=1443237556, job_id=4162642068) skipped
+2021-11-10 08:31:20.042 INFO github_utils: job_id:4162641244, job_name:Run docker integration tests, conclusion:failure
+2021-11-10 08:31:20.280 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Run docker integration tests')
+2021-11-10 08:31:20.280 INFO github_utils: job_id:4162641496, job_name:Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:20.483 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:20.483 INFO github_utils: job_id:4162641522, job_name:Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:20.647 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:20.647 INFO github_utils: job_id:4162641553, job_name:Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:20.837 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:20.837 INFO github_utils: job_id:4162641584, job_name:Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:21.020 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:21.020 INFO github_utils: job_id:4162641609, job_name:Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:21.251 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:21.251 INFO github_utils: job_id:4162641645, job_name:Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:21.443 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:21.443 INFO github_utils: job_id:4162641680, job_name:Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:21.618 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:21.619 INFO github_utils: job_id:4162641800, job_name:Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource, conclusion:failure
+2021-11-10 08:31:21.790 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource')
+2021-11-10 08:31:21.790 INFO github_utils: job_id:4162641835, job_name:Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml, conclusion:failure
+2021-11-10 08:31:21.998 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml')
+2021-11-10 08:31:21.998 INFO github_utils: job_id:4162641878, job_name:Build modules (master, regular job): pyspark-pandas, conclusion:failure
+2021-11-10 08:31:22.186 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): pyspark-pandas')
+2021-11-10 08:31:22.187 INFO github_utils: job_id:4162641921, job_name:Build modules (master, regular job): pyspark-pandas-slow, conclusion:failure
+2021-11-10 08:31:22.348 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Build modules (master, regular job): pyspark-pandas-slow')
+2021-11-10 08:31:22.348 INFO github_utils: job_id:4162642198, job_name:Run TPC-DS queries with SF=1, conclusion:failure
+2021-11-10 08:31:22.532 WARNING github_utils: Cannot find any test failure in workfolow job (owner=sleep1661, repo=spark, run_id=1443237556 job_name='Run TPC-DS queries with SF=1')
+2021-11-10 08:31:22.533 INFO github_utils: No test failure found in workfolow run (owner=sleep1661, repo=spark, run_id=1443237556 run_name='Build and test')
+2021-11-10 08:31:22.533 INFO github_utils: run_id:1443020787, run_name:Build and test, event:schedule, head_sha=f108dd9201885e8a90c24604707dfd35fe6eb106
+2021-11-10 08:31:22.657 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:22.763 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:22.765 INFO github_utils: run_id:1442602327, run_name:Build and test, event:schedule, head_sha=f108dd9201885e8a90c24604707dfd35fe6eb106
+2021-11-10 08:31:22.868 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:22.972 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:22.973 INFO github_utils: run_id:1442240010, run_name:Build and test, event:schedule, head_sha=f108dd9201885e8a90c24604707dfd35fe6eb106
+2021-11-10 08:31:23.071 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:23.170 INFO github_apis: api:/repos/sleep1661/spark/commits/f108dd9201885e8a90c24604707dfd35fe6eb106, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:23.171 INFO github_utils: 1 test results found in workflows (sleep1661/spark)
+2021-11-10 08:31:23.325 INFO github_apis: api:/repos/apache/spark/pulls/33872/commits, params:{'page': '1', 'per_page': '100'}, list length:8
+2021-11-10 08:31:23.327 INFO github_utils: pullreq#33872 has 0 commits (created_at:2021-08-31T08:15:36Z, updated_at:2021-11-10T07:24:07Z)
+2021-11-10 08:31:24.014 INFO crawl-github-logs: pr_user:MaxGekk, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:24.130 INFO github_apis: api:/repos/MaxGekk/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:25.482 INFO github_apis: api:/repos/MaxGekk/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443233062, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443140823, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443103402, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443047626, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443039564, run_name='Report test results') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1443038773, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442964408, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442952848, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442906259, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442827700, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442800094, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442770177, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442739867, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442676377, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442624654, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442590165, run_name='Report test results') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442589277, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442549408, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442525738, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.504 INFO github_utils: Run (run_id=1442476025, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442412388, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442381843, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442282653, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442275171, run_name='Report test results') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442274413, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442153293, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:25.505 INFO github_utils: Run (run_id=1442122044, run_name='Update build status workflow') skipped
+2021-11-10 08:31:25.505 INFO github_utils: run_id:1443038687, run_name:Build and test, event:schedule, head_sha=f6a044cf8cd83e6b3b30e515acbac0ec81607463
+2021-11-10 08:31:25.593 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:25.703 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:25.705 INFO github_utils: run_id:1442589220, run_name:Build and test, event:schedule, head_sha=f6a044cf8cd83e6b3b30e515acbac0ec81607463
+2021-11-10 08:31:25.802 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:25.900 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:25.902 INFO github_utils: run_id:1442274326, run_name:Build and test, event:schedule, head_sha=f6a044cf8cd83e6b3b30e515acbac0ec81607463
+2021-11-10 08:31:25.986 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:26.076 INFO github_apis: api:/repos/MaxGekk/spark/commits/f6a044cf8cd83e6b3b30e515acbac0ec81607463, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:26.077 INFO github_utils: 1 test results found in workflows (MaxGekk/spark)
+2021-11-10 08:31:26.210 INFO github_apis: api:/repos/apache/spark/pulls/34537/commits, params:{'page': '1', 'per_page': '100'}, list length:5
+2021-11-10 08:31:26.211 INFO github_utils: pullreq#34537 has 0 commits (created_at:2021-11-09T18:19:32Z, updated_at:2021-11-10T07:03:47Z)
+2021-11-10 08:31:26.881 INFO crawl-github-logs: pr_user:dchvn, pr_repo:spark, #pullreqs:2
+2021-11-10 08:31:26.991 INFO github_apis: api:/repos/dchvn/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:28.572 INFO github_apis: api:/repos/dchvn/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443243820, run_name='Report test results') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443236045, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443185257, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443126977, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443089546, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443068210, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443052946, run_name='Report test results') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443052393, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1443012470, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442977859, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442932720, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442866060, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442814397, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442779765, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442758109, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442710062, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.595 INFO github_utils: Run (run_id=1442686674, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442649003, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442603069, run_name='Report test results') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442602362, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442585408, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442566690, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442538304, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442520637, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442508166, run_name='Report test results') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442503177, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442497438, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442439941, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442392150, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442318900, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442253314, run_name='Report test results') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442252789, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442209484, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442069873, run_name='Close stale PRs') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442028118, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:28.596 INFO github_utils: Run (run_id=1442006612, run_name='Update build status workflow') skipped
+2021-11-10 08:31:28.596 INFO github_utils: run_id:1443236004, run_name:Build and test, event:push, head_sha=16e26049afc8ba92b06bdc58c47b211ea87e0d2b
+2021-11-10 08:31:28.682 INFO github_apis: api:/repos/dchvn/spark/commits/16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:28.772 INFO github_apis: api:/repos/dchvn/spark/commits/16e26049afc8ba92b06bdc58c47b211ea87e0d2b, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:28.880 INFO github_apis: api:/repos/dchvn/spark/actions/runs/1443236004/jobs, params:{'per_page': '1'}, top-level keys:jobs,total_count
+2021-11-10 08:31:29.304 INFO github_apis: api:/repos/dchvn/spark/actions/runs/1443236004/jobs, params:{'page': '0', 'per_page': '100'}, top-level keys:jobs,total_count
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162635585) skipped
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162636992) skipped
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162637194) skipped
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162637852) skipped
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162637885) skipped
+2021-11-10 08:31:29.310 INFO github_utils: Job (run_id=1443236004, job_id=4162637991) skipped
+2021-11-10 08:31:29.311 INFO github_utils: job_id:4162637261, job_name:Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource, conclusion:failure
+2021-11-10 08:31:29.500 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource')
+2021-11-10 08:31:29.500 INFO github_utils: job_id:4162637293, job_name:Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml, conclusion:failure
+2021-11-10 08:31:29.696 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml')
+2021-11-10 08:31:29.696 INFO github_utils: job_id:4162637326, job_name:Build modules (master, regular job): pyspark-pandas, conclusion:failure
+2021-11-10 08:31:29.874 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): pyspark-pandas')
+2021-11-10 08:31:29.874 INFO github_utils: job_id:4162637375, job_name:Build modules (master, regular job): pyspark-pandas-slow, conclusion:failure
+2021-11-10 08:31:30.089 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): pyspark-pandas-slow')
+2021-11-10 08:31:30.089 INFO github_utils: job_id:4162637447, job_name:Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:30.299 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:30.300 INFO github_utils: job_id:4162637496, job_name:Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:30.491 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:30.491 INFO github_utils: job_id:4162637550, job_name:Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:31.290 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:31.290 INFO github_utils: job_id:4162637582, job_name:Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:31.485 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:31.485 INFO github_utils: job_id:4162637609, job_name:Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:31.666 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:31.666 INFO github_utils: job_id:4162637649, job_name:Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:31.847 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:31.847 INFO github_utils: job_id:4162637679, job_name:Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:32.017 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:32.017 INFO github_utils: job_id:4162637795, job_name:Run docker integration tests, conclusion:failure
+2021-11-10 08:31:32.195 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Run docker integration tests')
+2021-11-10 08:31:32.195 INFO github_utils: job_id:4162638054, job_name:Run TPC-DS queries with SF=1, conclusion:failure
+2021-11-10 08:31:32.404 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1443236004 job_name='Run TPC-DS queries with SF=1')
+2021-11-10 08:31:32.404 INFO github_utils: No test failure found in workfolow run (owner=dchvn, repo=spark, run_id=1443236004 run_name='Build and test')
+2021-11-10 08:31:32.405 INFO github_utils: run_id:1443052316, run_name:Build and test, event:schedule, head_sha=bc80c844fcb37d8d699d46bb34edadb98ed0d9f7
+2021-11-10 08:31:32.488 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:32.579 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:32.581 INFO github_utils: run_id:1442602329, run_name:Build and test, event:schedule, head_sha=bc80c844fcb37d8d699d46bb34edadb98ed0d9f7
+2021-11-10 08:31:32.673 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:32.763 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:32.765 INFO github_utils: run_id:1442503064, run_name:Build and test, event:push, head_sha=bc80c844fcb37d8d699d46bb34edadb98ed0d9f7
+2021-11-10 08:31:32.863 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:32.947 INFO github_apis: api:/repos/dchvn/spark/commits/bc80c844fcb37d8d699d46bb34edadb98ed0d9f7, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:33.055 INFO github_apis: api:/repos/dchvn/spark/actions/runs/1442503064/jobs, params:{'per_page': '1'}, top-level keys:jobs,total_count
+2021-11-10 08:31:33.436 INFO github_apis: api:/repos/dchvn/spark/actions/runs/1442503064/jobs, params:{'page': '0', 'per_page': '100'}, top-level keys:jobs,total_count
+2021-11-10 08:31:33.441 INFO github_utils: Job (run_id=1442503064, job_id=4160766443) skipped
+2021-11-10 08:31:33.441 INFO github_utils: Job (run_id=1442503064, job_id=4160767550) skipped
+2021-11-10 08:31:33.441 INFO github_utils: Job (run_id=1442503064, job_id=4160767577) skipped
+2021-11-10 08:31:33.442 INFO github_utils: Job (run_id=1442503064, job_id=4160767680) skipped
+2021-11-10 08:31:33.442 INFO github_utils: Job (run_id=1442503064, job_id=4160768002) skipped
+2021-11-10 08:31:33.442 INFO github_utils: Job (run_id=1442503064, job_id=4160768128) skipped
+2021-11-10 08:31:33.442 INFO github_utils: job_id:4160767709, job_name:Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource, conclusion:failure
+2021-11-10 08:31:33.630 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): pyspark-sql, pyspark-mllib, pyspark-resource')
+2021-11-10 08:31:33.630 INFO github_utils: job_id:4160767726, job_name:Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml, conclusion:failure
+2021-11-10 08:31:33.807 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): pyspark-core, pyspark-streaming, pyspark-ml')
+2021-11-10 08:31:33.807 INFO github_utils: job_id:4160767745, job_name:Build modules (master, regular job): pyspark-pandas, conclusion:failure
+2021-11-10 08:31:33.990 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): pyspark-pandas')
+2021-11-10 08:31:33.990 INFO github_utils: job_id:4160767762, job_name:Build modules (master, regular job): pyspark-pandas-slow, conclusion:failure
+2021-11-10 08:31:34.164 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): pyspark-pandas-slow')
+2021-11-10 08:31:34.164 INFO github_utils: job_id:4160767783, job_name:Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:34.345 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): core, unsafe, kvstore, avro, network-common, network-shuffle, repl, launcher, examples, sketch, graphx  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:34.345 INFO github_utils: job_id:4160767803, job_name:Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:34.535 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): catalyst, hive-thriftserver  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:34.535 INFO github_utils: job_id:4160767820, job_name:Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:34.717 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): streaming, sql-kafka-0-10, streaming-kafka-0-10, mllib-local, mllib, yarn, mesos, kubernetes, hadoop-cloud, spark-ganglia-lgpl  (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:34.718 INFO github_utils: job_id:4160767839, job_name:Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:34.932 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): hive - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:34.932 INFO github_utils: job_id:4160767854, job_name:Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:35.118 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): hive - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:35.118 INFO github_utils: job_id:4160767876, job_name:Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:35.340 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): sql - slow tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:35.340 INFO github_utils: job_id:4160767901, job_name:Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3), conclusion:failure
+2021-11-10 08:31:35.517 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Build modules (master, regular job): sql - other tests (JDK 8, hadoop3.2, hive2.3)')
+2021-11-10 08:31:35.517 INFO github_utils: job_id:4160768215, job_name:Run docker integration tests, conclusion:failure
+2021-11-10 08:31:35.688 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Run docker integration tests')
+2021-11-10 08:31:35.688 INFO github_utils: job_id:4160768272, job_name:Run TPC-DS queries with SF=1, conclusion:failure
+2021-11-10 08:31:35.865 WARNING github_utils: Cannot find any test failure in workfolow job (owner=dchvn, repo=spark, run_id=1442503064 job_name='Run TPC-DS queries with SF=1')
+2021-11-10 08:31:35.865 INFO github_utils: No test failure found in workfolow run (owner=dchvn, repo=spark, run_id=1442503064 run_name='Build and test')
+2021-11-10 08:31:35.866 INFO github_utils: run_id:1442252714, run_name:Build and test, event:schedule, head_sha=abecdfe831805fb53fa949558ea7a5ca9042e465
+2021-11-10 08:31:35.966 INFO github_apis: api:/repos/dchvn/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:36.063 INFO github_apis: api:/repos/dchvn/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:36.064 INFO github_utils: 1 test results found in workflows (dchvn/spark)
+2021-11-10 08:31:36.209 INFO github_apis: api:/repos/apache/spark/pulls/34213/commits, params:{'page': '1', 'per_page': '100'}, list length:4
+2021-11-10 08:31:36.211 INFO github_utils: pullreq#34213 has 0 commits (created_at:2021-10-07T11:50:08Z, updated_at:2021-11-10T07:03:09Z)
+2021-11-10 08:31:36.883 INFO github_apis: api:/repos/apache/spark/pulls/34515/commits, params:{'page': '1', 'per_page': '100'}, list length:1
+2021-11-10 08:31:36.884 INFO github_utils: pullreq#34515 has 0 commits (created_at:2021-11-08T07:12:24Z, updated_at:2021-11-10T01:59:26Z)
+2021-11-10 08:31:37.568 INFO crawl-github-logs: pr_user:viirya, pr_repo:spark-1, #pullreqs:1
+2021-11-10 08:31:37.695 INFO github_apis: api:/repos/viirya/spark-1/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:39.210 INFO github_apis: api:/repos/viirya/spark-1/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:39.231 INFO github_utils: 0 test results found in workflows (viirya/spark-1)
+2021-11-10 08:31:39.406 INFO github_apis: api:/repos/apache/spark/pulls/34538/commits, params:{'page': '1', 'per_page': '100'}, list length:1
+2021-11-10 08:31:39.407 INFO github_utils: pullreq#34538 has 0 commits (created_at:2021-11-09T19:32:16Z, updated_at:2021-11-10T05:19:36Z)
+2021-11-10 08:31:39.408 INFO crawl-github-logs: pr_user:huaxingao, pr_repo:spark, #pullreqs:2
+2021-11-10 08:31:39.518 INFO github_apis: api:/repos/huaxingao/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:40.856 INFO github_apis: api:/repos/huaxingao/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:40.878 INFO github_utils: Run (run_id=1443202849, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.878 INFO github_utils: Run (run_id=1443131428, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1443096997, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1443071789, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1443055821, run_name='Report test results') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1443054661, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1443026799, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442980262, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442938444, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442881127, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442819713, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442786491, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442761426, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442725308, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442689205, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442657417, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442600493, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442589083, run_name='Report test results') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442588558, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442544536, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442527479, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442499949, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442454106, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442394728, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442321521, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442264396, run_name='Report test results') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442263741, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442231040, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442143394, run_name='Report test results') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442131154, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1442048099, run_name='Update build status workflow') skipped
+2021-11-10 08:31:40.879 INFO github_utils: Run (run_id=1441969227, run_name='Report test results') skipped
+2021-11-10 08:31:40.880 INFO github_utils: run_id:1443054625, run_name:Build and test, event:schedule, head_sha=e91d461d88d8a8bd8ce6db87e5eb06c71229909f
+2021-11-10 08:31:40.969 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.065 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.068 INFO github_utils: run_id:1442588503, run_name:Build and test, event:schedule, head_sha=e91d461d88d8a8bd8ce6db87e5eb06c71229909f
+2021-11-10 08:31:41.157 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.260 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.263 INFO github_utils: run_id:1442263686, run_name:Build and test, event:schedule, head_sha=e91d461d88d8a8bd8ce6db87e5eb06c71229909f
+2021-11-10 08:31:41.347 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.453 INFO github_apis: api:/repos/huaxingao/spark/commits/e91d461d88d8a8bd8ce6db87e5eb06c71229909f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:41.456 INFO github_utils: 1 test results found in workflows (huaxingao/spark)
+2021-11-10 08:31:41.577 INFO github_apis: api:/repos/apache/spark/pulls/34540/commits, params:{'page': '1', 'per_page': '100'}, list length:1
+2021-11-10 08:31:41.577 INFO github_utils: pullreq#34540 has 0 commits (created_at:2021-11-09T23:32:59Z, updated_at:2021-11-10T05:03:09Z)
+2021-11-10 08:31:41.725 INFO github_apis: api:/repos/apache/spark/pulls/34497/commits, params:{'page': '1', 'per_page': '100'}, list length:7
+2021-11-10 08:31:41.727 INFO github_utils: pullreq#34497 has 0 commits (created_at:2021-11-05T22:16:41Z, updated_at:2021-11-10T03:02:09Z)
+2021-11-10 08:31:55.022 INFO crawl-github-logs: pr_user:venkata91, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:55.139 INFO github_apis: api:/repos/venkata91/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:56.706 INFO github_apis: api:/repos/venkata91/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:56.727 INFO github_utils: 0 test results found in workflows (venkata91/spark)
+2021-11-10 08:31:56.877 INFO github_apis: api:/repos/apache/spark/pulls/33896/commits, params:{'page': '1', 'per_page': '100'}, list length:11
+2021-11-10 08:31:56.879 INFO github_utils: pullreq#33896 has 0 commits (created_at:2021-09-02T05:21:50Z, updated_at:2021-11-10T03:34:32Z)
+2021-11-10 08:31:56.879 INFO crawl-github-logs: pr_user:wForget, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:56.984 INFO github_apis: api:/repos/wForget/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:57.211 INFO github_apis: api:/repos/wForget/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:57.214 INFO github_utils: 0 test results found in workflows (wForget/spark)
+2021-11-10 08:31:57.359 INFO github_apis: api:/repos/apache/spark/pulls/34489/commits, params:{'page': '1', 'per_page': '100'}, list length:2
+2021-11-10 08:31:57.360 INFO github_utils: pullreq#34489 has 0 commits (created_at:2021-11-05T07:47:05Z, updated_at:2021-11-10T02:54:08Z)
+2021-11-10 08:31:57.360 INFO crawl-github-logs: pr_user:LuciferYang, pr_repo:spark, #pullreqs:1
+2021-11-10 08:31:57.482 INFO github_apis: api:/repos/LuciferYang/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:58.836 INFO github_apis: api:/repos/LuciferYang/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:31:58.858 INFO github_utils: Run (run_id=1443265052, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.858 INFO github_utils: Run (run_id=1443186349, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443127119, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443089392, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443068557, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443048024, run_name='Report test results') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443047297, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1443014589, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442978180, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442933190, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442867947, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442815313, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442780388, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442758362, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442714235, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442686782, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442649460, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442614146, run_name='Report test results') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442613873, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442586946, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442538591, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442521185, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442497646, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442442572, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442392450, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442319129, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442253301, run_name='Report test results') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442252602, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442209964, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442151780, run_name='Publish Snapshot') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442042722, run_name='Close stale PRs') skipped
+2021-11-10 08:31:58.859 INFO github_utils: Run (run_id=1442010856, run_name='Update build status workflow') skipped
+2021-11-10 08:31:58.860 INFO github_utils: run_id:1443047253, run_name:Build and test, event:schedule, head_sha=1099fd342075b53ad9ddb2787911f2dabb340a3d
+2021-11-10 08:31:58.948 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.043 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.044 INFO github_utils: run_id:1442613842, run_name:Build and test, event:schedule, head_sha=1099fd342075b53ad9ddb2787911f2dabb340a3d
+2021-11-10 08:31:59.137 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.216 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.217 INFO github_utils: run_id:1442252457, run_name:Build and test, event:schedule, head_sha=1099fd342075b53ad9ddb2787911f2dabb340a3d
+2021-11-10 08:31:59.303 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.386 INFO github_apis: api:/repos/LuciferYang/spark/commits/1099fd342075b53ad9ddb2787911f2dabb340a3d, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:31:59.387 INFO github_utils: 1 test results found in workflows (LuciferYang/spark)
+2021-11-10 08:31:59.534 INFO github_apis: api:/repos/apache/spark/pulls/34532/commits, params:{'page': '1', 'per_page': '100'}, list length:2
+2021-11-10 08:31:59.535 INFO github_utils: pullreq#34532 has 0 commits (created_at:2021-11-09T12:40:41Z, updated_at:2021-11-10T02:34:11Z)
+2021-11-10 08:32:01.012 INFO crawl-github-logs: pr_user:dongjoon-hyun, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:01.188 INFO github_apis: api:/repos/dongjoon-hyun/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:03.072 INFO github_apis: api:/repos/dongjoon-hyun/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443232314, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443166728, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443126325, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443087412, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443056045, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1443003637, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442999940, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442970228, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442940791, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442905111, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442851539, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442814324, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442779523, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.095 INFO github_utils: Run (run_id=1442751085, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442704475, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442677873, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442651842, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442619137, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442574000, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442570346, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442536507, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442508789, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442480490, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442427359, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442400311, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442375140, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442338363, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442284887, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442221094, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442188166, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442159215, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442081311, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1442018732, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: Run (run_id=1441950473, run_name='Update build status workflow') skipped
+2021-11-10 08:32:03.096 INFO github_utils: run_id:1443003540, run_name:Build and test, event:schedule, head_sha=2b4099f6e56e5c16cc31d51e1774f513641d164f
+2021-11-10 08:32:03.199 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.316 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.317 INFO github_utils: run_id:1442573952, run_name:Build and test, event:schedule, head_sha=2b4099f6e56e5c16cc31d51e1774f513641d164f
+2021-11-10 08:32:03.404 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.515 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.516 INFO github_utils: run_id:1442188084, run_name:Build and test, event:schedule, head_sha=2b4099f6e56e5c16cc31d51e1774f513641d164f
+2021-11-10 08:32:03.617 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.818 INFO github_apis: api:/repos/dongjoon-hyun/spark/commits/2b4099f6e56e5c16cc31d51e1774f513641d164f, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:03.819 INFO github_utils: 1 test results found in workflows (dongjoon-hyun/spark)
+2021-11-10 08:32:03.961 INFO github_apis: api:/repos/apache/spark/pulls/34539/commits, params:{'page': '1', 'per_page': '100'}, list length:1
+2021-11-10 08:32:03.961 INFO github_utils: pullreq#34539 has 0 commits (created_at:2021-11-09T23:11:14Z, updated_at:2021-11-10T02:02:10Z)
+2021-11-10 08:32:06.345 INFO crawl-github-logs: pr_user:hgs19921112, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:06.464 INFO github_apis: api:/repos/hgs19921112/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:07.321 INFO github_apis: api:/repos/hgs19921112/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:07.334 INFO github_utils: Run (run_id=1443034245, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:07.334 INFO github_utils: Run (run_id=1442598380, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:07.334 INFO github_utils: Run (run_id=1442280272, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:07.334 INFO github_utils: run_id:1443034139, run_name:Build and test, event:schedule, head_sha=d06f62b0de377f2cf91051d0551166c61c8333c0
+2021-11-10 08:32:07.465 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:07.612 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:07.614 INFO github_utils: run_id:1442598308, run_name:Build and test, event:schedule, head_sha=d06f62b0de377f2cf91051d0551166c61c8333c0
+2021-11-10 08:32:07.752 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:07.926 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:07.928 INFO github_utils: run_id:1442280189, run_name:Build and test, event:schedule, head_sha=d06f62b0de377f2cf91051d0551166c61c8333c0
+2021-11-10 08:32:08.063 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:08.204 INFO github_apis: api:/repos/hgs19921112/spark/compare/58e07e0f4cca1e3a6387a7e0c57faeb6c5ec9ef5...d06f62b0de377f2cf91051d0551166c61c8333c0, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:08.206 INFO github_utils: 1 test results found in workflows (hgs19921112/spark)
+2021-11-10 08:32:08.469 INFO github_apis: api:/repos/apache/spark/pulls/34492/commits, params:{'page': '1', 'per_page': '100'}, list length:4
+2021-11-10 08:32:08.470 INFO github_utils: pullreq#34492 has 0 commits (created_at:2021-11-05T10:19:38Z, updated_at:2021-11-10T01:08:19Z)
+2021-11-10 08:32:12.962 INFO crawl-github-logs: pr_user:luxu1-ms, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:13.070 INFO github_apis: api:/repos/luxu1-ms/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:14.092 INFO github_apis: api:/repos/luxu1-ms/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:14.114 INFO github_utils: 0 test results found in workflows (luxu1-ms/spark)
+2021-11-10 08:32:14.272 INFO github_apis: api:/repos/apache/spark/pulls/32655/commits, params:{'page': '1', 'per_page': '100'}, list length:2
+2021-11-10 08:32:14.272 INFO github_utils: pullreq#32655 has 0 commits (created_at:2021-05-24T22:46:36Z, updated_at:2021-11-10T00:37:20Z)
+2021-11-10 08:32:14.273 INFO crawl-github-logs: pr_user:ekoifman, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:14.404 INFO github_apis: api:/repos/ekoifman/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:15.770 INFO github_apis: api:/repos/ekoifman/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:15.793 INFO github_utils: Run (run_id=1442277389, run_name='Report test results') skipped
+2021-11-10 08:32:15.793 INFO github_utils: Run (run_id=1441974041, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:15.794 INFO github_utils: run_id:1441973913, run_name:Build and test, event:push, head_sha=8a3f27d5d1384bf9b7ed768fe5fd65bd9adf84e6
+2021-11-10 08:32:15.899 INFO github_apis: api:/repos/ekoifman/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...8a3f27d5d1384bf9b7ed768fe5fd65bd9adf84e6, params:{'per_page': '1'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:16.023 INFO github_apis: api:/repos/ekoifman/spark/compare/f6a044cf8cd83e6b3b30e515acbac0ec81607463...8a3f27d5d1384bf9b7ed768fe5fd65bd9adf84e6, params:{'page': '1', 'per_page': '100'}, top-level keys:ahead_by,base_commit,behind_by,commits,diff_url,files,html_url,merge_base_commit,patch_url,permalink_url,status,total_commits,url
+2021-11-10 08:32:16.025 INFO github_utils: 1 test results found in workflows (ekoifman/spark)
+2021-11-10 08:32:16.191 INFO github_apis: api:/repos/apache/spark/pulls/34464/commits, params:{'page': '1', 'per_page': '100'}, list length:3
+2021-11-10 08:32:16.192 INFO github_utils: pullreq#34464 has 0 commits (created_at:2021-11-02T03:40:42Z, updated_at:2021-11-10T00:09:46Z)
+2021-11-10 08:32:17.653 INFO crawl-github-logs: pr_user:HyukjinKwon, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:17.769 INFO github_apis: api:/repos/HyukjinKwon/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:19.214 INFO github_apis: api:/repos/HyukjinKwon/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:19.235 INFO github_utils: Run (run_id=1443024630, run_name='Report test results') skipped
+2021-11-10 08:32:19.235 INFO github_utils: Run (run_id=1442624672, run_name='Report test results') skipped
+2021-11-10 08:32:19.235 INFO github_utils: Run (run_id=1442263723, run_name='Report test results') skipped
+2021-11-10 08:32:19.235 INFO github_utils: run_id:1443023597, run_name:Build and test, event:schedule, head_sha=abecdfe831805fb53fa949558ea7a5ca9042e465
+2021-11-10 08:32:19.322 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.410 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.411 INFO github_utils: run_id:1442624042, run_name:Build and test, event:schedule, head_sha=abecdfe831805fb53fa949558ea7a5ca9042e465
+2021-11-10 08:32:19.504 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.596 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.597 INFO github_utils: run_id:1442263057, run_name:Build and test, event:schedule, head_sha=abecdfe831805fb53fa949558ea7a5ca9042e465
+2021-11-10 08:32:19.679 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.770 INFO github_apis: api:/repos/HyukjinKwon/spark/commits/abecdfe831805fb53fa949558ea7a5ca9042e465, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:19.771 INFO github_utils: 1 test results found in workflows (HyukjinKwon/spark)
+2021-11-10 08:32:19.919 INFO github_apis: api:/repos/apache/spark/pulls/34505/commits, params:{'page': '1', 'per_page': '100'}, list length:2
+2021-11-10 08:32:19.920 INFO github_utils: pullreq#34505 has 0 commits (created_at:2021-11-07T05:20:22Z, updated_at:2021-11-10T00:08:01Z)
+2021-11-10 08:32:20.617 INFO crawl-github-logs: pr_user:zero323, pr_repo:spark, #pullreqs:1
+2021-11-10 08:32:20.735 INFO github_apis: api:/repos/zero323/spark/actions/runs, params:{'per_page': '1'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:22.207 INFO github_apis: api:/repos/zero323/spark/actions/runs, params:{'page': '0', 'per_page': '100'}, top-level keys:total_count,workflow_runs
+2021-11-10 08:32:22.228 INFO github_utils: Run (run_id=1443248033, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1443145302, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1443107472, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1443057420, run_name='Report test results') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1443057182, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1443056775, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442969904, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442919056, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442830999, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442798114, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442750221, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442693629, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442638570, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442630354, run_name='Report test results') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442629999, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442556266, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442529607, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442487531, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442414803, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442384408, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442292136, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442245794, run_name='Report test results') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442245105, run_name='Cancelling Duplicates') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442155669, run_name='Update build status workflow') skipped
+2021-11-10 08:32:22.229 INFO github_utils: Run (run_id=1442132303, run_name='Publish Snapshot') skipped
+2021-11-10 08:32:22.230 INFO github_utils: run_id:1443056727, run_name:Build and test, event:schedule, head_sha=5c28b6e580dedd20666c7532e7d2786a6535ae36
+2021-11-10 08:32:22.333 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.417 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.419 INFO github_utils: run_id:1442629943, run_name:Build and test, event:schedule, head_sha=5c28b6e580dedd20666c7532e7d2786a6535ae36
+2021-11-10 08:32:22.505 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.594 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.595 INFO github_utils: run_id:1442245054, run_name:Build and test, event:schedule, head_sha=5c28b6e580dedd20666c7532e7d2786a6535ae36
+2021-11-10 08:32:22.695 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'per_page': '1'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.786 INFO github_apis: api:/repos/zero323/spark/commits/5c28b6e580dedd20666c7532e7d2786a6535ae36, params:{'page': '1', 'per_page': '100'}, top-level keys:author,comments_url,commit,committer,files,html_url,node_id,parents,sha,stats,url
+2021-11-10 08:32:22.787 INFO github_utils: 1 test results found in workflows (zero323/spark)
+2021-11-10 08:32:22.957 INFO github_apis: api:/repos/apache/spark/pulls/34273/commits, params:{'page': '1', 'per_page': '100'}, list length:11
+2021-11-10 08:32:22.959 INFO github_utils: pullreq#34273 has 0 commits (created_at:2021-10-13T10:53:46Z, updated_at:2021-11-10T00:02:10Z)
